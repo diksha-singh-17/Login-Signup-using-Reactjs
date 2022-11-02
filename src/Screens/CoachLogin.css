@@ -1,0 +1,6 @@
+.errormsg {
+  color: red;
+}
+.invalid {
+  border: 2px solid red !important;
+}
