@@ -1,3 +1,190 @@
+// export default function UserSignup() {
+//   return (
+//     <>
+//       <Card
+//   className="my-2 "
+//   style={{
+//     width: '60rem',
+//     border:'0'
+//   }}
+// >
+//   <CardHeader className="text-muted bg-dark ">
+//     User Profile
+//   </CardHeader>
+//   <CardBody>
+//     <Row>
+//       <Col md="6">
+//       <FormGroup>
+//     <Label for="examplename" className='text-muted'>
+//       Name
+//     </Label>
+//     <Input
+//       id="examplename"
+//       name="username"
+//       placeholder="User Name"
+//       type="text"
+//     />
+//   </FormGroup>
+//     </Col>
+//     <Col md={6}>
+//       <FormGroup>
+//         <Label for="examplePassword"  className='text-muted'>
+//           Password
+//         </Label>
+//         <Input
+//           id="examplePassword"
+//           name="password"
+//           placeholder="Password "
+//           type="password"
+//         />
+//       </FormGroup>
+//       </Col>
+//     </Row>
+//     <Row>
+      
+//       <Col md="6">
+//       <FormGroup>
+//     <Label for="exampleNumber"  className='text-muted'>
+//       Mobile Number
+//     </Label>
+//     <Input
+//       id="exampleNumber"
+//       name="number"
+//       placeholder="Mobile Number "
+//       type="number"
+//     />
+//   </FormGroup>
+//         </Col>
+//         <Col md="6">
+//       <FormGroup>
+//         <Label for="exampleEmail"  className='text-muted'>
+//           Email
+//         </Label>
+//         <Input
+//           id="exampleEmail"
+//           name="email"
+//           placeholder="Email"
+//           type="email"
+//         />
+//       </FormGroup>
+//       </Col>
+//     </Row>
+//     <Row>
+//       <Col md="6">
+//       <FormGroup>
+//     <Label for="exampleDatetime"  className='text-muted'>
+//       Date of Birth
+//     </Label>
+//     <Input
+//       id="exampleDatetime"
+//       name="datetime"
+//       placeholder="Date of Birth"
+//       type="date"
+//     />
+//   </FormGroup>
+//       </Col>
+//       <Col md="6">
+//       <FormGroup tag="fieldset">
+//     <legend className='text-muted'>
+//       Gender
+//     </legend>
+//     <div style={{
+//       display:'flex',
+//     }}>
+//     <FormGroup check>
+//       <Input
+//         name="radio1"
+//         type="radio"
+//       />
+//       {' '}
+//       <Label check className='text-muted mx-2'>
+//         Male
+//       </Label>
+//     </FormGroup>
+//     <FormGroup check>
+//       <Input
+//         name="radio1"
+//         type="radio"
+//       />
+//       {' '}
+//       <Label check className='text-muted'>
+//         Female
+//       </Label>
+//     </FormGroup>
+//     </div>
+//   </FormGroup>
+//         </Col>
+//     </Row>
+//     <Row>
+//       <Col md="6">
+//       <FormGroup>
+//     <Label for="examplePincode"  className='text-muted'>
+//       Pincode
+//     </Label>
+//     <Input
+//       id="examplePincode"
+//       name="number"
+//       placeholder="Pincode "
+//       type="number"
+//     />
+//   </FormGroup>
+//       </Col>
+//       <Col md="6">
+//       <FormGroup>
+//         <Label for="exampleCity"  className='text-muted'>
+//           City
+//         </Label>
+//         <Input
+//           id="exampleCity"
+//           name="city"
+//           placeholder="City"
+//       type="text"
+//         />
+//       </FormGroup>
+//         </Col>
+//     </Row>
+//     <Row>
+//       <Col md="6">
+//       <FormGroup>
+//         <Label for="exampleState"  className='text-muted'>
+//           State
+//         </Label>
+//         <Input
+//           id="exampleState"
+//           name="state"
+//           placeholder="State "
+//           type="text"
+//         />
+//       </FormGroup>
+//       </Col>
+//       <Col md="6">
+//       <FormGroup>
+//         <Label for="exampleCountry"  className='text-muted'>
+//           Country
+//         </Label>
+//         <Input
+//           id="exampleCountry"
+//           name="country"
+//           placeholder="Country "
+//       type="text"
+//         />
+
+//       </FormGroup>
+ 
+//         </Col>
+
+//     </Row>
+//     <div className='d-grid '>  
+//         <Button className="mt-2  bg-success ">
+//         Register
+//       </Button></div>
+
+//   </CardBody>
+//   </Card>
+//     </>
+//   )
+// }
+/************************************************************* */
 import React from 'react';
 import {Card, Button,FormGroup,Label,Input,CardHeader} from 'reactstrap';
 import {CardBody,Col,Row} from 'reactstrap';
@@ -74,7 +261,7 @@ function CountrySection(props){
   )
 };
 
-//  Name
+// For Name
 function TextInputName(props) {
   const {
     register,
@@ -87,7 +274,7 @@ function TextInputName(props) {
   return (
     <div>
       <FormGroup>
-    <Label for="examplename">
+    <Label for="examplename" className='text-muted'>
       Name
     </Label>
     <Input
@@ -109,7 +296,7 @@ function TextInputName(props) {
     </div>
   );
 }
-//  Password
+// For Password
 function TextInputPassword(props) {
   const {
     register,
@@ -122,7 +309,7 @@ function TextInputPassword(props) {
   return (
     <div>
           <FormGroup>
-          <Label for="examplePassword">
+          <Label for="examplePassword"  className='text-muted'>
           Password
         </Label>
           <Input
@@ -154,7 +341,7 @@ function TextInputMobileNumber(props) {
   return (
     <div>
           <FormGroup>
-          <Label for="exampleNumber">
+          <Label for="exampleNumber"  className='text-muted'>
       Mobile Number
     </Label>
           <Input
@@ -166,7 +353,7 @@ function TextInputMobileNumber(props) {
             innerRef={ref}
           />
               <div className="text-danger d-flex">
-        <h6><small> {errors.mobilenumber_section && "Mobile Number should have 10 digits"}</small></h6>
+        <h6><small> {errors.mobilenumber_section && "Mobile Number should have 10digits"}</small></h6>
         </div>
         </FormGroup>
         
@@ -186,7 +373,7 @@ function TextInputEmail(props) {
   return (
     <div>
           <FormGroup>
-          <Label for="exampleEmail">
+          <Label for="exampleEmail"  className='text-muted'>
           Email
         </Label>
         <Input
@@ -218,7 +405,7 @@ function TextInputDateOfBirth(props) {
   return (
     <div>
           <FormGroup>
-          <Label for="exampleDate" >
+          <Label for="exampleDate"  className='text-muted'>
       Date of Birth
     </Label>
     <Input
@@ -250,7 +437,7 @@ function TextInputPincode(props) {
   return (
     <div>
           <FormGroup>
-          <Label for="examplePincode">
+          <Label for="examplePincode"  className='text-muted'>
       Pincode
     </Label>
     <Input
@@ -262,7 +449,7 @@ function TextInputPincode(props) {
             innerRef={ref}
           />
               <div className="text-danger d-flex">
-        <h6><small> {errors.pincode_section && "Pincode should be 6 digits"}</small></h6>
+        <h6><small> {errors.pincode_section && "Pincode should be 6digits"}</small></h6>
         </div>
         </FormGroup>
         
@@ -282,7 +469,7 @@ function TextInputCity(props) {
   return (
     <div>
           <FormGroup>
-          <Label for="exampleCity">
+          <Label for="exampleCity"  className='text-muted'>
           City
         </Label>
         <Input
@@ -294,7 +481,7 @@ function TextInputCity(props) {
             innerRef={ref}
           />
               <div className="text-danger d-flex">
-        <h6><small> {errors.city_section && "City should be 6 to 20 characters"}</small></h6>
+        <h6><small> {errors.city_section && "City should be 6 to 20characters"}</small></h6>
         </div>
         </FormGroup>
         
@@ -314,7 +501,7 @@ function TextInputState(props) {
   return (
     <div>
           <FormGroup>
-          <Label for="exampleState">
+          <Label for="exampleState"  className='text-muted'>
           State
         </Label>
         <Input
@@ -326,7 +513,7 @@ function TextInputState(props) {
             innerRef={ref}
           />
               <div className="text-danger d-flex">
-        <h6><small> {errors.state_section && "State should be 6 to 20 characters"}</small></h6>
+        <h6><small> {errors.state_section && "State should be 6 to 20characters"}</small></h6>
         </div>
         </FormGroup>
         
@@ -346,7 +533,7 @@ function TextInputCountry(props) {
   return (
     <div>
           <FormGroup>
-          <Label for="exampleCountry" >
+          <Label for="exampleCountry"  className='text-muted'>
           Country
         </Label>
         <Input
@@ -358,7 +545,7 @@ function TextInputCountry(props) {
             innerRef={ref}
           />
               <div className="text-danger d-flex">
-        <h6><small> {errors.country_section && "Country should be 6 to 20 characters"}</small></h6>
+        <h6><small> {errors.country_section && "Country should be 6 to 20characters"}</small></h6>
         </div>
         </FormGroup>
         
@@ -370,11 +557,8 @@ function TextInputCountry(props) {
 function SubmitBtn(props) {
   const onSubmit = (data) => console.log(data);
 
-  return (<div  className=" d-block p-2">
-      <Button  className="mt-2  bg-success " style={{
-        paddingRight:'160px',
-        paddingLeft:'160px'
-      }} onClick={() => props.handleSubmit(onSubmit)()}>
+  return (<div  className=" d-grid">
+      <Button  className="mt-2  bg-success " onClick={() => props.handleSubmit(onSubmit)()}>
       Register
       </Button>
 
@@ -386,55 +570,94 @@ export default function UserSignup() {
   return (
     <>
       <Card
-  className="my-2 bg-dark"
+  className="my-2 "
   style={{
     width: '60rem',
     border:'0'
   }}
 >
-  
-  <CardHeader >
-              <div className='d-flex justify-content-center align-items-center '>
-              <span>
-              <img
-              className="rounded-circle  mx-auto d-block mb-4 mt-2 "
-              style={{
-                width: "60px",
-                height: "60px",
-                margin: "0",
-                
-              }}
-              alt="Card"
-              src="https://picsum.photos/300/200"
-            />
-              </span>
-            <span className='m-2'>  User Profile</span>
-            </div>
+  <CardHeader className="text-muted bg-dark ">
+    User Profile
   </CardHeader>
   <CardBody>
     <Row>
       <Col md="6">
+      {/* <FormGroup>
+    <Label for="examplename" className='text-muted'>
+      Name
+    </Label>
+    <Input
+      id="examplename"
+      name="username"
+      placeholder="User Name"
+      type="text"
+    />
+      </FormGroup> */}
         <NameSection {...methods} />
     </Col>
     <Col md={6}>
+      {/* <FormGroup>
+        <Label for="examplePassword"  className='text-muted'>
+          Password
+        </Label>
+        <Input
+          id="examplePassword"
+          name="password"
+          placeholder="Password "
+          type="password"
+        />
+      </FormGroup> */}
         <PasswordSection {...methods} />
       </Col>
     </Row>
     <Row>
       <Col md="6">
+      {/* <FormGroup>
+    <Label for="exampleNumber"  className='text-muted'>
+      Mobile Number
+    </Label>
+    <Input
+      id="exampleNumber"
+      name="number"
+      placeholder="Mobile Number "
+      type="number"
+    />
+  </FormGroup> */}
         <MobileNumberSection {...methods}/>
         </Col>
         <Col md="6">
+      {/* <FormGroup>
+        <Label for="exampleEmail"  className='text-muted'>
+          Email
+        </Label>
+        <Input
+          id="exampleEmail"
+          name="email"
+          placeholder="Email"
+          type="email"
+        />
+      </FormGroup> */}
       <EmailSection {...methods}/>
       </Col>
     </Row>
     <Row>
       <Col md="6">
+      {/* <FormGroup>
+    <Label for="exampleDatetime"  className='text-muted'>
+      Date of Birth
+    </Label>
+    <Input
+      id="exampleDatetime"
+      name="datetime"
+      placeholder="Date of Birth"
+      type="date"
+    />
+  </FormGroup> */}
       <DateOfBirthSection {...methods}/>
       </Col>
       <Col md="6">
       <FormGroup tag="fieldset">
-    <legend >
+    <legend className='text-muted'>
       Gender
     </legend>
     <div style={{
@@ -445,7 +668,8 @@ export default function UserSignup() {
         name="radio1"
         type="radio"
       />
-      <Label check className=' mx-2'>
+      {' '}
+      <Label check className='text-muted mx-2'>
         Male
       </Label>
     </FormGroup>
@@ -454,7 +678,8 @@ export default function UserSignup() {
         name="radio1"
         type="radio"
       />
-      <Label check >
+      {' '}
+      <Label check className='text-muted'>
         Female
       </Label>
     </FormGroup>
@@ -464,21 +689,75 @@ export default function UserSignup() {
     </Row>
     <Row>
       <Col md="6">
+      {/* <FormGroup>
+    <Label for="examplePincode"  className='text-muted'>
+      Pincode
+    </Label>
+    <Input
+      id="examplePincode"
+      name="number"
+      placeholder="Pincode "
+      type="number"
+    />
+  </FormGroup> */}
       <PincodeSection {...methods}/>
       </Col>
       <Col md="6">
+      {/* <FormGroup>
+        <Label for="exampleCity"  className='text-muted'>
+          City
+        </Label>
+        <Input
+          id="exampleCity"
+          name="city"
+          placeholder="City"
+      type="text"
+        />
+      </FormGroup> */}
       <CitySection {...methods}/>
         </Col>
     </Row>
     <Row>
       <Col md="6">
+      {/* <FormGroup>
+        <Label for="exampleState"  className='text-muted'>
+          State
+        </Label>
+        <Input
+          id="exampleState"
+          name="state"
+          placeholder="State "
+          type="text"
+        />
+      </FormGroup> */}
       <StateSection {...methods}/>
       </Col>
       <Col md="6">
+      {/* <FormGroup>
+        <Label for="exampleCountry"  className='text-muted'>
+          Country
+        </Label>
+        <Input
+          id="exampleCountry"
+          name="country"
+          placeholder="Country "
+      type="text"
+        />
+
+      </FormGroup> */}
       <CountrySection {...methods}/>
         </Col>
 
     </Row>
+    {/* <div className='d-grid '>  
+        <Button className="mt-2  bg-success ">
+        Register
+      </Button></div> */}
+
+      {/* <PasswordSection {...methods} /> */}
+      {/* <MobileNumberSection {...methods}/> */}
+      {/* <EmailSection {...methods}/> */}
+      {/* <DateOfBirthSection {...methods}/> */}
       < SubmitBtn {...methods} />  
   </CardBody>
 
