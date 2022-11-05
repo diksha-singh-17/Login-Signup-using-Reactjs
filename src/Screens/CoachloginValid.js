@@ -4,29 +4,29 @@ import { Form} from "reactstrap";
 import { Card, CardTitle, Button, FormGroup, Label, Input } from "reactstrap";
 import { useForm } from "react-hook-form";
 
-import "./CoachLogin.css";
 
 function IdSection(props){
   return(
     <div>
-        <TextInput {...props} />
+        <TextInputId {...props} />
     </div>
   )
 };
-function PassSection(props){
+function PasswordSection(props){
   return(
     <div>
-          <TextInput1 {...props} />
+          <TextInputPassword {...props} />
     </div>
   )
 };
 
-function TextInput(props) {
+// For ID
+function TextInputId(props) {
   const {
     register,
     formState: { errors }
   } = props;
-  const { ref, ...rest } = register("idsec", {
+  const { ref, ...rest } = register("id_section", {
     required: true
   });
 
@@ -44,18 +44,23 @@ function TextInput(props) {
             {...rest}
             innerRef={ref}
           />
+              <div className="text-danger d-flex">
+        <h6><small> {errors.id_section && "ID Field is Required"}</small></h6>
+        </div>
         </FormGroup>
-      {errors.idsec && "Cannot be blank"}
+        
+
     </div>
   );
 }
-function TextInput1(props) {
+// For Password
+function TextInputPassword(props) {
   const {
     register,
     formState: { errors }
   } = props;
-  const { ref, ...rest } = register("passsec", {
-    required: true
+  const { ref, ...rest } = register("password_section", {
+    required: true,minLength:5,maxLength: 10
   });
 
   return (
@@ -72,8 +77,12 @@ function TextInput1(props) {
             {...rest}
             innerRef={ref}
           />
+                  <div  className="text-danger d-flex">
+        <h6><small> {errors.password_section && "Password should have 5 to 10 characters"}</small></h6>
+        </div>
         </FormGroup> 
-      {errors.passsec && "Cannot be blank"}
+        
+
     </div>
   );
 }
@@ -81,7 +90,7 @@ function TextInput1(props) {
 function SubmitBtn(props) {
   const onSubmit = (data) => console.log(data);
 
-  return <Button onClick={() => props.handleSubmit(onSubmit)()}>Submit</Button>;
+  return (<div  className=" d-grid"> <Button color="primary"  onClick={() => props.handleSubmit(onSubmit)()}>Login</Button></div>)
 }
 
 export const CoachloginValid =()=> {
@@ -98,28 +107,26 @@ export const CoachloginValid =()=> {
           }}
         >
           <div
-            style={{
-              display: "flex",
-              //  flexdirection:'row'
-            }}
+            className="d-flex"
           >
             <img
-              className="rounded-circle  mx-auto d-block"
+              className="rounded-circle  mx-auto d-block mb-4 mt-2"
               style={{
                 width: "60px",
                 height: "60px",
                 margin: "0",
+                
               }}
               alt="Card"
               src="https://picsum.photos/300/200"
             />
-            <CardTitle tag="h5" className=" mb-2 mt-2">
+            <CardTitle tag="h5" className=" mb-2 mt-4">
               Login As Life Coach
             </CardTitle>
             </div>
             <Form>
             < IdSection {...methods}/>
-            < PassSection {...methods}/>
+            < PasswordSection {...methods}/>
             < SubmitBtn {...methods} />   
           </Form>
       
